@@ -22,7 +22,7 @@ const Hero = () => {
         <section className="hero">
             {/* Video Background */}
             <video autoPlay loop muted playsInline className="hero-video">
-                <source src="/assets/video_2.mp4" type="video/mp4" />
+                <source src="/assets/video_3.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
 
