@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Play, Pause, Music } from "lucide-react"; 
+import { ReactTyped } from "react-typed";
 import "../styles/hero.css";
 
 const Hero = () => {
@@ -20,44 +21,40 @@ const Hero = () => {
     return (
         <section className="hero">
             {/* Video Background */}
-            <video autoPlay loop muted className="hero-video">   
-                <source src="https://assets.coderrocketfuel.com/video-background.mp4" type="video/mp4" />
+            <video autoPlay loop muted playsInline className="hero-video">
+                <source src="/assets/video_1.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
 
-            {/* Animated Title */}
-            <motion.p
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-            >
-                Hi, I'm Ryan Alistair Anak Allen 👋
-            </motion.p>
+            { /* Hero Content */}
+            <div className="hero-content">
+                {/* Rounded Container */}
+                <motion.div
+                    className="hero-text-container"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1 }}>
 
-            {/* Animated Subtitle */}
-            <motion.p
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-            >
-                Short Introduction Here
-            </motion.p>
-            
-            {/* Music Player*/}
-            <div className="music-player">
-                <audio ref={audioRef} loop>
-                    <source src="https://assets.coderrocketfuel.com/pomodoro-times-up.mp3" />
-                </audio>
+                    {/* Hero Text */}
+                    <h1>
+                        <ReactTyped
+                            strings={["Hello World, I'm Ryan Alistair"] }
+                            typeSpeed={50}
+                            backSpeed={30}
+                        />
+                    </h1>
 
-                {/* Play/Pause Button */}
-                <motion.button
-                    className="play-pause-button"
-                    onClick={togglePlay}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                >
-                    {isPlaying ? <Pause size={24} /> : <Play size={24} />}
-                </motion.button>
+                    {/* Typing Subtitle*/}
+                    <p>
+                        <span className="static-text">Aspiring</span>
+                        <ReactTyped
+                            strings={["Web Developer", "Front-end Developer", "Android Developer"]}
+                            typeSpeed={50}
+                            backSpeed={20}
+                            loop
+                        />
+                    </p>
+                </motion.div>
             </div>
         </section>
         );
