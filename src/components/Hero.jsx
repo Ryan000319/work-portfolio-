@@ -56,8 +56,27 @@ const Hero = () => {
                             loop
                         />
                     </p>
+
+                  
                 </motion.div>
+
+                {/* Spotify Player */}
+                <div className="spotify-container">
+                <p className="spotify-title"> Headphones Recommended :D </p>
+                <div className="spotify-player">
+                    <iframe
+                        className="spotify-iframe"
+                        src="https://open.spotify.com/embed/playlist/4bRrguEXybiZwgHthNfWvh?utm_source=generator&theme=0"
+                        width="300"
+                        height="152"
+                        frameBorder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"
+                    ></iframe>
             </div>
+                
+            </div>
+        </div>
         </section>
         );
     };
