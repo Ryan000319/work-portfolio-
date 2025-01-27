@@ -41,6 +41,8 @@ const Hero = () => {
                             strings={["Hello World, I'm Ryan Alistair"] }
                             typeSpeed={50}
                             backSpeed={30}
+                            showCursor={true}
+                            cursorChar="|"
                         />
                     </h1>
 
