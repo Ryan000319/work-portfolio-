@@ -37,8 +37,9 @@ const Hero = () => {
 
                     {/* Hero Text */}
                     <h1>
+                        <span className="title-text"></span>
                         <ReactTyped
-                            strings={["Hello World, I'm Ryan Alistair"] }
+                            strings={["Hello World"] }
                             typeSpeed={50}
                             backSpeed={30}
                             showCursor={true}
@@ -59,24 +60,8 @@ const Hero = () => {
 
                   
                 </motion.div>
-
-                {/* Spotify Player */}
-                <div className="spotify-container">
-                <p className="spotify-title"> Headphones Recommended 🎧 </p>
-                <div className="spotify-player">
-                    <iframe
-                        className="spotify-iframe"
-                        src="https://open.spotify.com/embed/playlist/4bRrguEXybiZwgHthNfWvh?utm_source=generator&theme=0"
-                        width="300"
-                        height="152"
-                        frameBorder="0"
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"
-                    ></iframe>
-            </div>
                 
             </div>
-        </div>
         </section>
         );
     };
