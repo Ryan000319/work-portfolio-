@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { Play, Pause, Music } from "lucide-react"; 
 import { ReactTyped } from "react-typed";
 import "../styles/hero.css";
 
@@ -31,32 +30,48 @@ const Hero = () => {
                 {/* Rounded Container */}
                 <motion.div
                     className="hero-text-container"
-                    initial={{ opacity: 0, scale: 0.8 }}
+                    initial={{ opacity: 0, scale: 1 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1 }}>
 
                     {/* Hero Text */}
                     <h1>
-                        <span className="title-text"></span>
-                        <ReactTyped
-                            strings={["Hello World"] }
-                            typeSpeed={50}
-                            backSpeed={30}
-                            showCursor={true}
-                            cursorChar="|"
-                        />
+                        <span className="function-keyword">function </span>
+                        <span className="function-name">Name</span>
+                        <span className="function-symbols">(){}{"{"}</span>
                     </h1>
 
-                    {/* Typing Subtitle*/}
-                    <p>
-                        <span className="static-text">Aspiring</span>
-                        <ReactTyped
-                            strings={["Web Developer", "Front-end Developer", "Android Developer"]}
+                    <p> 
+                        <span className="return-statement">return </span>
+                        <span className="string">"Ryan Alistair"</span>
+                    </p>
+
+                    <h1>
+                        <span className="function-symbols">{"}"} </span>
+                    </h1>
+
+                    <h1>
+                        <span className="function-keyword">function </span>
+                        <span className="function-name">Aspiration</span>
+                        <span className="function-symbols">(){}{"{"}</span>
+                    </h1>
+
+                    <p> 
+                        <span className="return-statement">return </span>
+                        <span className="string">"</span>
+                        <ReactTyped 
+                            className="typed-text"
+                            strings={["Software Engineer","Web Developer", "Front-end Developer", "Android Developer"]}
                             typeSpeed={50}
                             backSpeed={20}
                             loop
                         />
+                         <span className="string">"</span>
                     </p>
+
+                    <h1>
+                        <span className="function-symbols">{"}"} </span>
+                    </h1>
 
                   
                 </motion.div>
