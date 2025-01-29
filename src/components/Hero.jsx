@@ -61,7 +61,7 @@ const Hero = () => {
                         <span className="string">"</span>
                         <ReactTyped 
                             className="typed-text"
-                            strings={["Software Engineer","Web Developer", "Front-end Developer", "Android Developer"]}
+                            strings={["Software Engineer","Web Developer", "Front-end Developer", "Android Developer", "Game Developer"]}
                             typeSpeed={50}
                             backSpeed={20}
                             loop
