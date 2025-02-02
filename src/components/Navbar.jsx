@@ -34,6 +34,7 @@ const Navbar = () => {
           ☰
         </div>
         <div className={`navbar-links ${isMobileMenuOpen ? "active" : ""}`}>
+          <a href="#hero" onClick={() => setIsMobileMenuOpen(false)}>Home</a>
           <a href="#about" onClick={() => setIsMobileMenuOpen(false)}>About</a>
           <a href="#projects" onClick={() => setIsMobileMenuOpen(false)}>Projects</a>
           <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>

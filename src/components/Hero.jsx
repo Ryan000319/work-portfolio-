@@ -2,6 +2,9 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ReactTyped } from "react-typed";
 import "../styles/hero.css";
+import { Music } from "lucide-react";
+import MusicPlayer from "./MusicPlayer";
+import Scroll from "./Scroll";
 
 const Hero = () => {
     const [isPlaying, setIsPlaying] = useState(false); 
@@ -18,7 +21,7 @@ const Hero = () => {
     };
 
     return (
-        <section className="hero">
+        <section className="hero" id="hero">
             {/* Video Background */}
             <video autoPlay loop muted playsInline className="hero-video">
                 <source src="/assets/video_3.mp4" type="video/mp4" />
@@ -73,7 +76,7 @@ const Hero = () => {
                         <span className="function-symbols">{"}"} </span>
                     </h1>
 
-                  
+                    
                 </motion.div>
                 
             </div>

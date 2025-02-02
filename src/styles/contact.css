@@ -1,0 +1,64 @@
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background: linear-gradient(135deg, rgba(32, 32, 32, 1) 0%, rgba(40, 44, 52, 1) 100%);
+}
+
+.contact-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    width: 400px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #50fa7b;
+    margin-bottom: 15px;
+}
+
+/* Input Fields */
+.input-group {
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input Glow Effect */
+input:focus, textarea:focus {
+    box-shadow: 0px 0px 10px #50fa7b;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: #50fa7b;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background: #ff79c6;
+    box-shadow: 0px 0px 10px #ff79c6;
+}

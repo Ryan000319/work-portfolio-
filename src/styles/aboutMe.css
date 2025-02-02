@@ -1,0 +1,110 @@
+.about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgba(221,230,241,255);
+}
+
+.about-card {
+    position: absolute;
+    background: rgba(40, 44, 52, 0.9);
+    border-radius: 30px;
+    height: 90vh;
+    width: 25%;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+    overflow: hidden;
+}
+
+/* 📌 Video Background */
+.about-video {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.8;
+    filter: blur(10px);
+}
+
+.about-text {
+    padding: 40px;
+}
+
+.about-description {
+    text-align: justify;
+}
+
+
+
+.about-degree {
+    color: wheat;
+    text-align: left;
+    margin-bottom: 20px;
+
+}
+
+/* profile image */
+.profile-img {
+    width: auto;
+    object-fit: cover;
+    border-radius: 30px 30px 0 0;
+}
+
+/* title */
+.about-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: blanchedalmond;
+    text-align: left;
+}
+
+/* description */
+.about-description {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 20px;
+
+}
+
+.highlight {
+    color: #50fa7b;
+    font-weight: bold;
+}
+
+/* Skills Icons */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 10px; 
+    padding: 20px;
+    max-width: 100%;
+}
+
+.skill {
+    font-size: 14px;
+    background: wheat;
+    padding: 12px 20px;
+    border-radius: 12px;
+    color: black;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    background: #ffcc66; 
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.skill:active {
+    transform: scale(0.95);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
