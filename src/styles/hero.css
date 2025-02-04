@@ -30,8 +30,6 @@
 /* Hero Content */
 .hero-content {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -46,7 +44,7 @@
     align-self: right;
     margin-right: 10vh;
     margin-top: 30vh;
-    width: 580px;
+    width: 25%;
     background: rgba(40, 44, 52, 0.9);
     backdrop-filter: blur(15px);
     padding: 25px 50px;
@@ -163,9 +161,9 @@
 
 @media (max-width: 768px) {
     .hero-text-container {
-        width: 100%;
-        margin-right: 0;
+        width: 80%;
         margin-top: 30vh;
+        margin-right: 5vh;
     }
 
     .hero-text-container h1 {
@@ -178,10 +176,5 @@
 
     .hero-text-container p {
         font-size: 20px;
-    }
-
-    .spotify-container {
-        top: 700px;
-        left: 50px;
     }
   }
