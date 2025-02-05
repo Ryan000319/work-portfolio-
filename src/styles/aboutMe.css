@@ -7,26 +7,16 @@
 }
 
 .about-card {
-    position: absolute;
     background: rgba(40, 44, 52, 0.9);
     border-radius: 30px;
-    height: auto;
     width: 25%;
+    max-width: 90%;
     text-align: center;
     align-items: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     animation: fadeIn 1.5s ease-in-out;
     overflow: hidden;
-}
-
-/* 📌 Video Background */
-.about-video {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    opacity: 0.8;
-    filter: blur(10px);
+    z-index: 1;
 }
 
 .about-text {

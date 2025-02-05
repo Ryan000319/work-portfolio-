@@ -6,12 +6,6 @@ const AboutMe = () => {
     return (
 
         <section className="about-me" id="about">
-            {/* Video Background */}
-            <video autoPlay loop muted playsInline className="about-video">
-                <source src="/assets/4.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-
             <motion.div
                 initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 0 }}

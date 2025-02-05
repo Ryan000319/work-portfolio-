@@ -27,7 +27,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`navbar ${isShrunk ? "shrink" : ""}`}>  
+    <nav className="navbar">  
       <div className="navbar-container">
         <h1 className="logo">My Portfolio</h1>
         <div className="hamburger" onClick={toggleMobileMenu}>
