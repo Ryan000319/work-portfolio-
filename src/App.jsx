@@ -8,7 +8,6 @@ import Contact from "./components/Contact";
 function App() {
   return (
     <div className="app">
-      <Navbar />
       <Hero />
       <AboutMe />
     </div>

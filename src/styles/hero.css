@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    background-color:  white;
     font-size: 24px;
     font-weight: bold;
     overflow: hidden;
@@ -22,11 +22,10 @@
     width: 100vw; 
     height: 100vh; 
     object-fit: cover; 
-    opacity: 0.9;
     z-index: -100;
-    filter: blur(5px);
+    opacity: 0.9;
+    filter: blur(2px);
 }
-
 
 
 /* Hero Content */
@@ -37,13 +36,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
     padding: 10px;
     z-index: 2;
 }
 
 .hero-text-container {
-    align-self: center;
+    align-self: right;
+    margin-right: 15%;
     margin-top: 30vh;
     min-width: 23%;
     max-width: 100%;
@@ -169,7 +169,7 @@
     .hero-text-container {
         width: 80%;
         margin-top: 30vh;
-        margin-left: 0;
+        margin-right: 0;
     }
 
     .hero-text-container h1 {
