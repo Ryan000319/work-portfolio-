@@ -2,29 +2,13 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ReactTyped } from "react-typed";
 import "../styles/hero.css";
-import { Music } from "lucide-react";
-import MusicPlayer from "./MusicPlayer";
-import Scroll from "./Scroll";
 
 const Hero = () => {
-    const [isPlaying, setIsPlaying] = useState(false); 
-    const audioRef = useRef(null);
-
-    //Toggle play/pause
-    const togglePlay = () => {
-        if (isPlaying) {
-            audioRef.current.pause();
-        } else {
-            audioRef.current.play();
-        }
-        setIsPlaying(!isPlaying);
-    };
-
     return (
         <section className="hero" id="hero">
             {/* Video Background */}
             <video autoPlay loop muted playsInline className="hero-video">
-                <source src="/assets/video_8.mp4" type="video/mp4" />
+                <source src="/assets/video_3.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
 
