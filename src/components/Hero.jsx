@@ -8,7 +8,7 @@ const Hero = () => {
         <section className="hero" id="hero">
             {/* Video Background */}
             <video autoPlay loop muted playsInline className="hero-video">
-                <source src="/assets/video_3.mp4" type="video/mp4" />
+                <source src="/assets/Cafe.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
 
@@ -62,7 +62,6 @@ const Hero = () => {
 
                     
                 </motion.div>
-                
             </div>
         </section>
         );

@@ -17,7 +17,7 @@
 
 /* 📌 Video Background */
 .hero-video {
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100vw; 
     height: 100vh; 
@@ -42,11 +42,10 @@
 
 .hero-text-container {
     align-self: right;
-    margin-right: 15%;
+    margin-right: 5%;
     margin-top: 30vh;
-    min-width: 23%;
     max-width: 100%;
-    background: rgba(40, 44, 52, 0.9);
+    background: rgba(40, 44, 52, 0.8);
     backdrop-filter: blur(15px);
     padding: 25px 50px;
     border-radius: 20px;
@@ -159,6 +158,69 @@
     border-radius: 12px;
     overflow: hidden;
 }
+
+
+.music-player {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(40, 44, 52, 0.8);
+    backdrop-filter: blur(15px);
+    padding: 12px 20px;
+    border-radius: 12px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.music-controls button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #50fa7b;
+    cursor: pointer;
+}
+
+.volume-slider {
+    width: 100px;
+}
+
+.music-title {
+    color: #f1fa8c;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.play-pause-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.play-pause-button:hover {
+    transform: scale(1.2);
+}
+
+.spotify-player-embed {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(40, 44, 52, 0.8);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    z-index: 5;
+}
+  
 
 @media (max-width: 768px) {
     .hero-content {

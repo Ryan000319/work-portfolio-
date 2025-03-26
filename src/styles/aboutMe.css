@@ -1,138 +1,205 @@
-.about-me {
+.about-me-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: white; /* IDE-themed bg */
+    color: white;
+  }
+  
+  /* 🎞️ Main image */
+  .gallery-wrapper {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: opacity 0.5s ease-in-out;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 🔍 Thumbnails */
+  .thumbnail-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.about-card {
-    background: rgba(40, 44, 52, 0.9);
-    border-radius: 30px;
-    min-width: 25%;
-    max-width: 25%;
-    text-align: center;
-    align-items: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 1.5s ease-in-out;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.about-text {
-    padding: 40px;
-}
-
-.about-description {
-    text-align: justify;
-}
-
-
-
-.about-degree {
-    color: wheat;
-    text-align: left;
-    margin-bottom: 20px;
-
-}
-
-/* profile image */
-.profile-img {
-    width: auto;
+    margin-top: 10px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .thumbnail {
+    width: 60px;
+    height: 60px;
     object-fit: cover;
-    border-radius: 30px 30px 0 0;
-}
-
-/* title */
-.about-title {
-    font-size: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: transform 0.2s ease;
+  }
+  
+  .thumbnail:hover,
+  .thumbnail.active {
+    transform: scale(1.1);
+    opacity: 1;
+    outline: 2px solid #50fa7b;
+  }
+  
+  /* 📄 Resume Button */
+  .download-resume {
+    margin-top: 15px;
+    display: inline-block;
+    background-color: #61dafb;
+    color: #000;
     font-weight: bold;
-    color: blanchedalmond;
-    text-align: left;
-}
-
-/* description */
-.about-description {
-    font-size: 20px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .download-resume:hover {
+    background-color: #21a1f1;
+  }
+  
+  .glass-connect {
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(40, 44, 52, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
     color: white;
+    font-size: 18px;
+  }
+
+  .contact-icons {
+    display: flex;              
+    justify-content: center;     
+    align-items: center;
+    gap: 5px;                  
+  }
+
+  .contact-icons a {
+    text-decoration: none;
+  }
+  
+  .icon-img {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+    filter: brightness(1.1);
+    background-color: white;
+    border-radius: 25%;
+  }
+  
+  .icon-img:hover {
+    transform: scale(1.15);
+    filter: brightness(1.4);
+  }
+  
+  /* 🧑‍💻 Profile Section */
+  .profile-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background: rgba(40, 44, 52, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .profile-card h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #ffb86c;
+  }
+  
+  .degree {
+    font-size: 18px;
+    color: #ddd;
     margin-bottom: 20px;
-
-}
-
-.highlight {
+  }
+  
+  .about-bullets {
+    list-style: none;
+    padding-left: 10px; /* 👈 adds proper left indent */
+    margin-top: 10px;
+    text-align: left;   /* 👈 ensures text is left-aligned */
+  }
+  
+  
+  .about-bullets li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #f8f8f2;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .about-bullets li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
     color: #50fa7b;
     font-weight: bold;
-}
+  }
 
-/* Skills Icons */
-.skills-container {
+  .profile-card h3 {
+    margin-top: 25px;
+    font-size: 18px;
+    color: #ffb86c;
+  }
+  
+  .skills, .interests, .awards {
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: left;
-    gap: 10px; 
-    max-width: 100%;
-}
-
-.skill {
-    font-size: 14px;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .skill-chip,
+  .interest-tag {
     background: wheat;
-    padding: 12px 20px;
-    border-radius: 12px;
     color: black;
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    display: inline-block;
-    text-align: center;
-    cursor: pointer;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 6px 12px;
+  }
+  
+  .badge {
+    background: wheat;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 17px;
+    color: black;
+    font-weight: 600;
+  }
+  
+  .contact-icons {
+    margin-top: 15px;
+  }
+  
+  .contact-icons a {
+    color: #8be9fd;
+    margin-right: 15px;
+    text-decoration: none;
     font-weight: bold;
-}
-
-.skill:hover {
-    transform: scale(1.1);
-    background: #ffcc66; 
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
-}
-
-.skill:active {
-    transform: scale(0.95);
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 1280px) {
-    .about-card {
-        max-width: 70%; 
-    }
-}
-
-
-@media (max-width: 768px) {
-    .about-me {
-        flex-direction: column;
-        height: auto;
-        padding: 40px 20px;
-    }
-
-    .about-card {
-        max-width: 90%;
-        height: auto;
-    }
-
-    .profile-img {
-        width: 100%;
-        height: auto;
-        border-radius: 20px 20px 0 0;
-    }
-
-    .about-text { 
-        padding: 40px;
-    }
-
-    .skills-container {
-        gap: 10px;
-    }
-
-    .skill {
-        padding: 10px 15px;
-        font-size: 14px;
-    }
-}
-    
+  }
+  

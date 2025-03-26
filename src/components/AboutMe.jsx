@@ -1,45 +1,96 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/aboutMe.css";
-import { motion } from "framer-motion";
 
 const AboutMe = () => {
-    return (
+  const images = [
+    "/assets/profile.jpg",
+    "/assets/profile.jpg",
+    "/assets/profile.jpg"
+  ];
 
-        <section className="about-me" id="about">
-            <motion.div
-                initial={{ opacity: 0, x: -100 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1 }}
-                className="about-card"
-            >
-                {/* Profile Picture */}
-                <img 
-                    src="/assets/profile.jpg"
-                    alt="Profile"
-                    className="profile-img"
-                />
-                {/* About Me Text */}
-                <div className="about-text">
-                    <h2 className="about-title">Ryan Alistair Anak Allen</h2>
-                    <h3 className="about-degree">(Bachelor of Engineering (Robotics & Mechatronics) | Bachelor of Computer Science (Software Development) | 3.45 CGPA</h3>
-                    <p className="about-description">
-                        I am a recent graduate with a passion for creating beautiful, functional, and user-friendly applications. I have experience in web, mobile, and software development, along with vision-based AI applications. Though still gaining experience, I am always eager to learn new technologies and expand my skill set.
-                    </p>
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-                    {/* Skills */}
-                    <div className="skills-container">
-                        {["JavaScript", "React.js", "Vue.js", "Kotlin", "Python", "C++", "C#", "Ruby", "Firebase", "MYSQL"].map((skill, index) => (
-                            <span key={index} className="skill">{skill}</span>
-                        ))}
-                    </div>
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 10000);
+    return () => clearInterval(interval);
+  }, [images.length]);
 
-                    
-                </div>
+  const selectImage = (index) => setCurrentIndex(index);
 
-                
-            </motion.div>
-        </section>
-    );
+  return (
+    <section className="about-me-section" id="about">
+      <div className="gallery-wrapper">
+        <img
+          src={images[currentIndex]}
+          alt={`Ryan ${currentIndex + 1}`}
+          className="main-img"
+        />
+
+        <div className="thumbnail-container">
+          {images.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              className={`thumbnail ${index === currentIndex ? "active" : ""}`}
+              onClick={() => selectImage(index)}
+              alt={`Thumbnail ${index + 1}`}
+            />
+          ))}
+        </div>
+
+        <div className="glass-connect">
+            <h3 style={{ color: "#ffb86c" }}>Connect with Me</h3>
+            <div className="contact-icons">
+                <a href="https://github.com/Ryan000319" target="_blank">
+                    <img src="/assets/github.jpg" alt="GitHub" className="icon-img" />
+                </a>
+                <a href="https://linkedin.com/in/ryan-alistair-b6126420a" target="_blank">
+                    <img src="/assets/linkedin.jpg" alt="LinkedIn" className="icon-img" />
+                </a>
+                <a href="mailto:ryanalistairallen14@gmail.com">
+                    <img src="/assets/gmail.jpg" alt="Email" className="icon-img" />
+                </a>
+            </div>
+        </div>
+
+      </div>
+
+      <div className="profile-card">
+        <h2>Ryan Alistair Anak Allen</h2>
+
+        <ul className="about-bullets">
+          <li>Bachelor's double degree in Engineering & Computer Science (CGPA 3.45)</li>
+          <li>Former R&D Intern at SEB, contributed to a robotic arm.</li>
+          <li>Proficient in full-stack web & android mobile development.</li>
+          <li>Built a YOLO-based automated robot for my Final Year Project.</li>
+          <li>Passionate about immersive UX in web, mobile and game development.</li>
+        </ul>
+
+        <h3>Core Tech Stack</h3>
+        <div className="skills">
+          {["Python", "C++", "Kotlin", "React", "Node.js", "Firebase"].map(skill => (
+            <span className="skill-chip" key={skill}>{skill}</span>
+          ))}
+        </div>
+
+        <h3>Awards & Highlights</h3>
+        <div className="awards">
+          <span className="badge">Best Implemented FYP</span>
+          <span className="badge">Swinburne Emerging Leaders Award (SELA)</span>
+        </div>
+
+        <h3>Interests</h3>
+        <div className="interests">
+          {["Gaming", "PC Building", "Piano", "3D Printing", "History"].map(interest => (
+            <span className="interest-tag" key={interest}>{interest}</span>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
 };
 
 export default AboutMe;
